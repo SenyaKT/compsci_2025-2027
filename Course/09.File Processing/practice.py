@@ -11,7 +11,7 @@ TEXT_PATH = DATA_DIR / "text.txt"
 # if it doesnt , assign value to 1 by ex, mydictionary["b"]=1
 
 with open(TEXT_PATH, "r" ) as f:
-    file_text= f.read().lower()
+    file_text= f.read().lower().replace(" ","").replace("\n","")
     print(file_text)
     
 alphabet_dict = {
